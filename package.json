@@ -1,7 +1,6 @@
 {
-  "name": "ng2-charts-base",
-  "version": "1.6.0",
-  "private": true,
+  "name": "ee-charts",
+  "version": "1.6.2",
   "description": "Reactive, responsive, beautiful charts for Angular2 based on Chart.js",
   "scripts": {
     "lite-server": "lite-server -c demo/bs-config.json",
@@ -25,7 +24,7 @@
     "git-commit-changelog": "git commit -am \"chore(changelog): update\"",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -p angular -r 2"
   },
-  "main": "bundles/ng2-charts.umd.js",
+  "main": "dist/bundles/ng2-charts.umd.js",
   "module": "index.js",
   "typings": "index.d.ts",
   "keywords": [
@@ -39,7 +38,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/valor-software/ng2-charts.git"
+    "url": "git+ssh://git@github.com/andriikobzar/ng2-charts.git"
   },
   "bugs": {
     "url": "https://github.com/valor-software/ng2-charts/issues"
@@ -130,5 +129,8 @@
       "email": "nataliya.soloviova@valor-software.com",
       "url": "https://github.com/natali-abyss"
     }
+  ],
+  "files": [
+    "dist/**"
   ]
 }
