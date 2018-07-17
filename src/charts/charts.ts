@@ -73,8 +73,9 @@ export class BaseChartDirective implements OnDestroy, OnChanges, OnInit {
         }
 
         this.chart.update();
-      } else {
-      // otherwise rebuild the chart
+      }
+      // rebuild the chart if anything
+      if (Object.keys(changes).findIndex(v => v !== 'data' && v !== 'datasets') > -1) {
         this.refresh();
       }
     }
@@ -298,7 +299,7 @@ function generateColors(count:number):Array<number[]> {
  * @param count
  * @returns {Color}
  */
-function getColors(chartType:string, index:number, count:number):Color {
+function getColors(chartType:string, index:number, count:number):Color|number[] {
   if (chartType === 'pie' || chartType === 'doughnut') {
     return formatPieColors(generateColors(count));
   }
